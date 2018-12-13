@@ -34,12 +34,13 @@ const z = ["Vacation"]
 
 /* Question 2 - Begin: (9 points) */
 // a) (4) - Create a named function called addStrings that has 2 parameters, a and b
-{
+function addStrings(a, b) {
+
   // b) (4) - Return the sum of the 2 parameters. NOTE: it should equal 31, NOT 526
-  
+  let parseString = parseInt(a) + parseInt(b)
 }
 // c) (1) - Call the function with the following arguments
-("5", "26");
+console.log(addStrings("5", "26"))
 /* Question 2 - End */
 
 
