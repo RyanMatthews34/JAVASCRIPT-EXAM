@@ -82,41 +82,50 @@ let thing2= things.pop();
 /* Question 5 - End */
 
 
-/* Question 6 - Begin: (25 points) */
+//* Question 6 - Begin: (25 points) */
 let colours = ['#3498db', '#e74c3c', '#e67e22', '#f1c40f'];
 // a) (4) - Select and store the question 6 element from the index.html file into a variable with the correct visibility scope (remember, it's passed by reference which means it doesn't need to be mutable)
-question6;
+const question6 = document.querySelector('#question6')
 // b) (3) - Using JavaScript, create a new 'button' element and store it in a variable
-let button;
+let button = document.createElement("button");   
 // c) (3) - Change the text property on the button to read 'click me'
-
+button.value = document.createTextNode("click me"); 
 // d) (4) - Add an event listener to the button and pass the event to the callback
-{
+document.addEventListener("click", myFunction);
+
+function myFunction() {
+  
   // e) (3) - Select a random colour and store it in variable
   // https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
-  let randomColour;
+  let randomColour = Math.floor(Math.random() * colours.length)
   // f) (5) - Change the background colour of the button to the random colour using the event target to access the element
-  
-};
+  button.style.color = colours[randomColour]
+});
 // g) (3) - Append the button to the question 6 element
+button.append(question6)
 
 /* Question 6 - End */
 
 
 /* Question 7 - Begin: (17 points) */
 // a) (3) - Create a literal object called Dave
-{
+let Dave = {
+
   // b) (2) - Add properties and values for first name and last name
-  
+  firstName: "Dave"
+  lastName: "Graham"
   
   // c) (4) - Add a property for birth date that has the value of a new date object with the date "1978-12-22"
-  
+  birthDate: "1978-12-22"
+
 };
 // d) (6) - Add a new property, on the Dave object, called "bio" that has the following value:
 // "My name is {firstName} {lastName} and my birth date is {birthDate}." NOTE: Replace the values using string interpolation. Don't forget the important object context when attempting to access the properties.
-
+ bio: function () {
+    console.log(` "My name is ${this.firstName} ${this.lastName} and my birth date is ${this.birthDate}." `)
+  }
 // e) (2) - Console log Dave's bio
-
+console.log(Dave.bio())
 /* Question 7 - End */
 
 
