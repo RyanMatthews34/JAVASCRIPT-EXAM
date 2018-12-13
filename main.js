@@ -231,9 +231,9 @@ let GoldenRetriever;
 
 /* Question 16 - Begin: (20 points) */
 // a) (5) - Write an object constructor for the object Employee that takes the 4 arguments used for the Person object and a new argument called 'career'
-{
+function Person (name, age, interests, gender, career) {
   // b) (2) - Assign the career argument to a property called 'career'
-  
+  this.career = career;
   // c) (7) - Inherit Person by instantiating it correctly
   
 }
@@ -244,7 +244,10 @@ let GoldenRetriever;
 
 /* Question 17 - Begin: (14 points) */
 // a) (4) - Create a new prototypal method on the Employee constructor that adds the function "details" and has the parameters 'property' and 'selector'
-{
+{function Employee (firstName, lastName, dob) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.type = "Person";
   // b) (4) - Using the property argument, select the property from the object and assign it to a variable called 'prop'. Hint: Because 'property' will be a string, you will need to use the [index] syntax to select it on the object. The dot syntax will not work.
   
   // c) (4) - Select and store the appropriate HTML element using the selector argument in a variable called 'element'
@@ -263,7 +266,7 @@ let GoldenRetriever;
 // age: 27
 // career: plumber
 // and assign it to a variable named 'plumber'
-
+let plumber = new Employee("Bob", "178", "78", "27", "plumber");
 // b) (15) - Using the Employee details method, pass the correct property name and selector string to fill in the table under #question19 in the index.html. Make sure you call the method on 'plumber' or you'll get 'undefined' and not receive the marks.
 
 
@@ -285,14 +288,16 @@ fetch(requestURL)
 .then(wesGotsDatum);
 /* Question 19 - End */
 
+
 /* Question 20 - Begin: (14 points) */
 {
   
   // a) (5) - Loop through all the products using a for each loop
-  {
+  for (let product of products) {
     // b) (9) - Console log each product's sku, name, height, length, and width in the following format:
     // `{name}::{sku} - {height}cm x {length}cm x {width}cm, {weight}kg`
-    
+    let proDi = document.createElement('div');
+    proDi.textContent = `${product["name"]}: ${product["dimensions"]["height"]}cm x ${product["dimensions"]["width"]}cm x ${product["dimensions"]["length"]}cm`;
   }
 }
 /* Question 20 - End */
