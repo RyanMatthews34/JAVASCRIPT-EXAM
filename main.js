@@ -137,22 +137,22 @@ lis;
 
 /* Question 9 - Begin: (29 points) */
 // a) (5) - Write an object constructor for the object 'Cube' that takes the following 3 arguments: height, width, and length
-{
+function Cube (height, width, length) {
   // b) (6) - Assign the arguments to 3 properties called height, width, and length
-  
-  
-  
+  this.height = height;
+  this.width = width;
+  this.length = length;
 }
 // c) (4) - Create a new prototypal method that adds the function "calculateCube"
-{
+this.calculateCube = function {
   // d) (6) - Return the following calculation: height * width * length
   // NOTE: Remember you must use the current object's context when accessing these properties for this to work
-  
+  return height * width * length;
 }
 // e) (6) - Instantiate a new cube object called "notASquare" with the dimensions 5x5x5
-let notASquare;
+let notASquare = new Cube (5, 5, 5);
 // f) (2) - Console log the value of calculateCube
-
+console.log(notASquare.this)
 /* Question 9 - End */
 
 
