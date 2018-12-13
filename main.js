@@ -276,15 +276,14 @@ let GoldenRetriever;
 /* Question 19 - Begin: (10 points) */
 const requestURL = "https://gcsmckinnon.netlify.com/week-12/json-apis/data.json";
 // a) (2) - Fetch the above URL
-
+fetch(requestURL)
 // b) (6) - Return the response as JSON
-{
-  
-}
+.then(function (response) {
+  return response.json();
+})
 // c) (2) - Pass in the dataFetch definition
-
+.then(wesGotsDatum);
 /* Question 19 - End */
-
 
 /* Question 20 - Begin: (14 points) */
 {
