@@ -131,17 +131,17 @@ console.log(Dave.bio())
 
 /* Question 8 - Begin: (18 points) */
 // Walking the DOM using CSS selectors:
-// a) (4) - Select the span that contains the text "my span friend" and store it in a variable with the correct visibility scope
-span;
+var span = document.getElementsByTagName('span');
 // b) (4) - Select the second li tag in the unordered list under question 8 and store it with the correct visibility scope
-secondLi;
+var secondLi = document.querySelector('li')
 // Walking the DOM using the current selected element scope:
 // c) (2) - Select and store the question 8 element with the correct visibility scope
-question8;
+const question8 = document.querySelector('question8');
 // d) (4) - Using the question 8 element you stored, select and store the ul element with the correct visibility scope
-ul;
+const ul = document.querySelector('ul');
 // e) (4) - Using the ul element you stored, select and store ALL the li elements with the correct visibility scope
-lis;
+const lis = document.querySelector('li');
+
 /* Question 8 - End */
 
 
