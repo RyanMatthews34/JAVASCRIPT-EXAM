@@ -22,15 +22,13 @@
 /* Question 1 - Begin: (12 points) */
 // Using the appropriate visibility modifiers,
 // a) (3) - Make the following variable globally scoped and equal to an integer value
-var x = 1;
+x = 10
 // b) (3) - Make the following variable functionally scoped and equal to a string value
-(function () {
-  var y = 'This is a string';
-})
+var y = "Hello"
 // c) (3) - Make the following variable block scoped, mutable, and equal to a boolean value
-w;
+let w = true
 // d) (3) - Make the following variable block scoped, immutable, and equal to an array value
-z;
+const z = ["Vacation"]
 /* Question 1 - End */
 
 
