@@ -243,23 +243,19 @@ Employee.prototype = Person.prototype;
 /* Question 16 - End */
 
 
-/* Question 17 - Begin: (14 points) */
+ /* Question 17 - Begin: (14 points) */
 // a) (4) - Create a new prototypal method on the Employee constructor that adds the function "details" and has the parameters 'property' and 'selector'
-Employee.prototype.details = function (proptery, selector) 
-{
+Employee.prototype.details = function(property, selector) {
   // b) (4) - Using the property argument, select the property from the object and assign it to a variable called 'prop'. Hint: Because 'property' will be a string, you will need to use the [index] syntax to select it on the object. The dot syntax will not work.
-    let prop = Employee['property']
+  let prop = this[property];
+
   // c) (4) - Select and store the appropriate HTML element using the selector argument in a variable called 'element'
-     let element = document.querySelector('#'+selector);
+  let element = document.querySelector("#" + selector);
   // d) (2) - Assign the 'prop' value to the 'element's text property
-      element.textContent = prop;
-
-}
-
-
+  element.textContent = prop;
+};
 
 /* Question 17 - End */
-
 
 /* Question 18 - Begin: (23 points) */
 // a) (8) - Instantiate a new Employee with the following details:
@@ -269,12 +265,13 @@ Employee.prototype.details = function (proptery, selector)
 // age: 27
 // career: plumber
 // and assign it to a variable named 'plumber'
-var plumber = new Employee('Bob','178','78',27,'plumber');
+var plumber = new Employee("Bob", "178", "78", 27, "plumber");
 // b) (15) - Using the Employee details method, pass thecorrect property name and selector string to fill in the table under #question19 in the index.html. Make sure you call the method on 'plumber' or you'll get 'undefined' and not receive the marks.
-plumber.property.details('name','name');
-
-
-
+plumber.details("name", "name");
+plumber.details("height", "height");
+plumber.details("weight", "weight");
+plumber.details("age", "age");
+plumber.details("career", "career");
 
 // /* Question 18 - End */
 
